@@ -26,8 +26,8 @@ services:
     container_name: banking-db
     environment:
       - POSTGRES_DB=banking_db
-      - POSTGRES_USER=hamza
-      - POSTGRES_PASSWORD=hamza
+      - POSTGRES_USER=ghizlane
+      - POSTGRES_PASSWORD=ghizlane
       - PGDATA=/var/lib/postgresql/data/pgdata
     ports:
       - "5432:5432"
@@ -36,7 +36,7 @@ services:
     networks:
       - banking-network
     healthcheck:
-      test: [ "CMD", "pg_isready", "-U", "hamza" ]
+      test: [ "CMD", "pg_isready", "-U", "ghizlane" ]
       interval: 30s
       timeout: 10s
       retries: 5
